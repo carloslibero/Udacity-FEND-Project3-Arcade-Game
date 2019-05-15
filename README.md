@@ -44,7 +44,7 @@ The scope of this project is to pass Udacity project #3 requirements, therefore 
 This project started with a provided art assets and a game engine. Also it had a first start code for the html, a very basic CSS file and app.js missing almost all functions and classes.
 
 After creating a high level plan for this item, it was defined to have the following actions performed:
-1. Fix issues with current provided files and perform a few tests to understand how the provided game engine works (in Porgress)
+1. Fix issues with current provided files and perform a few tests to understand how the provided game engine works
 1. Create the background tileset (in progress)
 1. Create the enemy class and experiment with one instance to get a proper speed and random position (TODO)
 1. Implement several enemies to game (TODO)
