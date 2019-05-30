@@ -15,7 +15,8 @@ Project number 3 from Udacity Front-End Web development is related to classic ar
 Just download all files from this project and start index.html file
 
 ### How to play the game
-TODO: Provide instructions of how to play the game
+Game is easy enough to play. Enemies will spawn on the stone road. They must be avoided.
+Player movement is done via arrow keys or ASDW. Take all of them to the other side to win.
 
 ## Instructions (As provided by Udacity)
 
@@ -38,6 +39,7 @@ The scope of this project is to pass Udacity project #3 requirements, therefore 
 - Experienced a more complex game logic
 - Implemented a fully Object Oriented project with classes and inheritance
 - First experience with Javascript and Design Patterns
+- Practiced game design
 
 ## Project details
 
@@ -45,7 +47,7 @@ This project started with a provided art assets and a game engine. Also it had a
 
 After creating a high level plan for this item, it was defined to have the following actions performed:
 1. Fix issues with current provided files and perform a few tests to understand how the provided game engine works
-1. Create the background tileset (in progress)
+1. Create the background tileset
 1. Create the enemy class and experiment with one instance to get a proper speed and random position (TODO)
 1. Implement several enemies to game (TODO)
 1. Implement player class and its movement, handling screen collision (TODO)
@@ -55,7 +57,7 @@ After creating a high level plan for this item, it was defined to have the follo
     - Blinking animation when player is hit (TODO)
     - A pool of characters to be used as player (TODO)
     - A variety of enemies (TODO)
-    - Number of movements track (TODO)
+    - ~~Number of movements track~~ (feature not implemented - game design decision)
     - Stamina and rule to not allow player to freely move (TODO)
     - Some item to recover stamina on the road (TODO)
     - A more challenge win condition, such as having to cross all characters available from pool (TODO)

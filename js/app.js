@@ -1,3 +1,47 @@
+// Tile Board Class that will be used for positioning and collision with borders/water
+// Lane will be set based on a 6 x 5 grid.
+// [0,0] will be set to the top left corner (water) and [4, 5] bottom right corner (grass)
+class TileBoard {
+    constructor (rows, columns) {
+        this.rows = rows;
+        this.columns;
+    }
+
+    lanePosition (tileLane) {
+        switch (tileLane) {
+            case 0:
+                return -15;
+                break;
+            case 1:
+                return 60;
+                break;
+            case 2:
+                return 145;
+                break;
+            case 3:
+                return 230;
+                break;
+            case 4:
+                return 310;
+                break;
+            case 5:
+                return 400;
+                break;
+            default:
+                return -100;
+                break;
+        }
+    }
+
+    tilePosition (tileSetx, tileSety) {
+
+    }
+
+};
+
+// Instantiate the TileBoard for all objects to use it
+const tileBoard = new TileBoard(6,5);
+
 // Enemies our player must avoid
 class Enemy {    
     // Constructor class with ES6 approach
@@ -11,20 +55,7 @@ class Enemy {
 
         // Enemy position at screen
         this.x = -120;
-        switch (lane) {
-            case 1:
-                this.y = 60;
-                break;
-            case 2:
-                this.y = 145;
-                break;
-            case 3:
-                this.y = 230;
-                break;
-            default:
-                this.y = -100;
-                break;
-        }
+        this.y = tileBoard.lanePosition(this.lane);
 
         // Enemy speed
         this.speed = 50;
@@ -100,16 +131,16 @@ class Player {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-let enemy1 = new Enemy("bug", 1);
-let enemy2 = new Enemy("bug", 2);
-let enemy3 = new Enemy("bug", 3);
-let allEnemies = [enemy1, enemy2, enemy3];
+let allEnemies = [enemy1 = new Enemy("bug", 1),
+                  enemy2 = new Enemy("bug", 2),
+                  enemy3 = new Enemy("bug", 3)];
 let player = new Player();
 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
+    // Allowed arrows and traditional ASDW keys to work with game
     let allowedKeys = {
         37: 'left',
         65: 'left',
